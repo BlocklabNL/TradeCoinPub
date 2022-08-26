@@ -1,0 +1,98 @@
+
+$colors: (
+    background: #fff,
+    primary: #1890ff,
+    secondary: #fff,
+    border: #e8e8e8,
+    border-light: #eeeeee,
+    shadow: #aaa,
+    text: #000,
+    light-text: #333,
+    failure: #f00,
+    success: rgb(15, 185, 15),
+  );
+  
+  $font: (
+    family: 'Arial',
+    sizeHtml: 88%,
+    size: 1rem,
+    sizeTitle: 1.7rem,
+    sizeSubTitle: 1.1rem,
+  );
+  
+  $cursors: (
+    pointer: pointer,
+    disabled: not-allowed,
+  );
+  
+  $borders: (
+    base: 0.0625rem,
+    radius: 8px,
+  );
+  
+  $decor: (
+    paddingBase: 0.625rem,
+  );
+  
+  @mixin absolutecenter($axis: "both") {
+    position: absolute;
+  
+    @if $axis == "y" {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @if $axis == "x" {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @if $axis == "both" {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  
+  @mixin clearFix () {
+    *zoom: 1;
+  
+    &:before, &:after {
+      content: '';
+      display: table;
+    }
+  
+    &:after {
+      clear: both;
+    }
+  }
+  
+  @mixin breakPoint($point) {
+    @if $point == "xl" { // 1050px
+      @media (max-width: 65.625rem) { @content; }
+    }
+    @else if $point == "lg" { // 900px
+      @media (max-width: 56.25rem) { @content; }
+    }
+    @else if $point == "md" { // 768px
+      @media (max-width: 48rem)  { @content; }
+    }
+    @else if $point == "sm" { // 600px
+      @media (max-width: 37.5rem)  { @content; }
+    }
+    @else if $point == "xs" { // 400px
+      @media (max-width: 25rem)  { @content; }
+    }
+  }
+  
+  @mixin fullWidth() {
+    width: 100%;
+  }
+  
+  @mixin fullHeight() {
+    height: 100%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }

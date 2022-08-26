@@ -1,0 +1,46 @@
+{
+  "name": "tokenization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tradeCoin": "truffle compile && truffle run abigen TradeCoinContract",
+    "build:tradeCoinAbigen": "abigen --bin=./abigenBindings/bin/TradeCoinContract.bin --abi=./abigenBindings/abi/TradeCoinContract.abi --pkg=tradeCoin --out=tradeCoin.go",
+    "build:tradeCoinGo": "yarn build:tradeCoin && yarn build:tradeCoinAbigen",
+
+    "build:composition": "truffle compile && truffle run abigen TradeCoinCompositionContract --overwrite",
+    "build:compositionAbigen": "abigen --bin=./abigenBindings/bin/TradeCoinCompositionContract.bin --abi=./abigenBindings/abi/TradeCoinCompositionContract.abi --pkg=tradeCoinComposition --out=tradeCoinComposition.go",
+    "build:compositionGo": "yarn build:composition && yarn build:compositionAbigen",
+
+    "build:compositionSales": "truffle compile && truffle run abigen TradeCoinCompositionSales --overwrite",
+    "build:compositionSalesAbigen": "abigen --bin=./abigenBindings/bin/TradeCoinCompositionSales.bin --abi=./abigenBindings/abi/TradeCoinCompositionSales.abi --pkg=tradeCoinCompositionSales --out=tradeCoinCompositionSales.go",
+    "build:compositionSalesGo": "yarn build:compositionSales && yarn build:compositionSalesAbigen"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainsafe/truffle-plugin-abigen": "^0.0.2",
+    "@openzeppelin/contracts": "^4.3.3",
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "chai": "^4.3.6",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-solhint": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "eth-gas-reporter": "^0.2.24",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.9.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.20",
+    "solpp": "^0.11.5",
+    "truffle-plugin-verify": "^0.5.21"
+  }
+}

@@ -1,0 +1,8 @@
+[global.databases]
+users= { url = "postgres://root@localhost:26257/?sslmode=disable" }
+
+[production]
+log="critical"
+
+[global]
+address= "0.0.0.0"

@@ -1,0 +1,13 @@
+.secret
+.etherscanSecret
+.coinmarketcapSecret
+node_modules/
+yarn-error.log
+
+#Truffle files
+build/
+abigenBindings/
+
+#Hardhat files
+cache
+artifacts

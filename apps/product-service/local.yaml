@@ -1,0 +1,13 @@
+http:
+  addr: 0.0.0.0
+  port: 8081
+
+db:
+  driver: sqlite3
+  connstring: tradecoin-sqlite
+
+productcontract:
+  address: 0x21e7024e5b6D32B16D9a9F4C993Aa71816d64593
+
+compositioncontract:
+  address: 0xDe71F2412bb92A00a158b6568fA6Cce663d0AE6d

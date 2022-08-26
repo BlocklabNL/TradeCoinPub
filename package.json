@@ -1,0 +1,12 @@
+{
+  "name": "tradecoin",
+  "private": true,
+  "devDependencies": {
+    "hardhat": "^2.9.9",
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "mongoose": "^6.3.8"
+  }
+}

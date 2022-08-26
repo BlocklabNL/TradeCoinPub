@@ -1,0 +1,21 @@
+{
+  "name": "@deliver/contracts-notary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "truffle test",
+    "build": "truffle compile && truffle run abigen Notary",
+    "build:abigen": "abigen --bin=./abigenBindings/bin/Notary.bin --abi=./abigenBindings/abi/Notary.abi --pkg=notary --out=notary.go",
+    "build:go": "yarn build && yarn build:abigen",
+    "clean": "rm -rf build/ abigenBindings"
+  },
+  "devDependencies": {
+    "truffle": "^5.3.13",
+    "@chainsafe/truffle-plugin-abigen": "^0.0.2",
+    "truffle-assertions": "^0.9.2"
+  },
+  "dependencies": {
+    "yarn": "^1.22.11"
+  }
+}

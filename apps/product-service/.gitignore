@@ -1,0 +1,4 @@
+deliver-sqlite%!(EXTRA string=, string=)
+logistics-product-service
+/data
+product-service

@@ -1,0 +1,17 @@
+{
+  "name": "@deliver/contracts-vault",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "truffle test",
+    "build": "truffle compile && truffle run abigen Vault",
+    "build:abigen": "abigen --bin=./abigenBindings/bin/Vault.bin --abi=./abigenBindings/abi/Vault.abi --pkg=vault --out=vault.go",
+    "build:go": "yarn build && yarn build:abigen",
+    "clean": "rm -rf build/ abigenBindings"
+  },
+  "devDependencies": {
+    "@chainsafe/truffle-plugin-abigen": "^0.0.2",
+    "truffle": "^5.3.13"
+  }
+}

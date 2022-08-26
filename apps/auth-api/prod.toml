@@ -1,0 +1,2 @@
+host= "auth-api-release-cockroachdb"
+port= 26257

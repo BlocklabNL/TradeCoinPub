@@ -1,0 +1,23 @@
+{
+  "name": "@deliver/contracts-new-customer-journey",
+  "version": "1.0.0",
+  "description": "Core library customer journey contracts",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "truffle test",
+    "build": "truffle compile && truffle run abigen CustomerJourney",
+    "build:abigen": "abigen --bin=./abigenBindings/bin/CustomerJourney.bin --abi=./abigenBindings/abi/CustomerJourney.abi --pkg=journey --out=journey.go",
+    "build:go": "yarn build && yarn build:abigen",
+    "clean": "rm -rf build/ abigenBindings"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@chainsafe/truffle-plugin-abigen": "^0.0.2",
+    "@deliver/contracts-new-notary": "^1.0.0",
+    "truffle": "^5.3.13"
+  },
+  "dependencies": {
+    "lerna": "^4.0.0",
+    "truffle-assertions": "^0.9.2"
+  }
+}

@@ -1,0 +1,103 @@
+@import "../node_modules/antd/dist/antd.css";
+.logo {
+  float: left;
+  font-size: 20px;
+  color: #fff;
+  width: 120px;
+  height: 31px;
+  padding-right: 30px;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+.site-page-header-ghost-wrapper {
+  padding: 15px;
+  background-color: #f5f5f5;
+}
+
+.dynamic-delete-button {
+  position: relative;
+  top: 4px;
+  margin: 0 8px;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.dynamic-delete-button:hover {
+  color: #777;
+}
+.dynamic-delete-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#components-transfer-demo-table-transfer .ant-table td {
+  background: transparent;
+}
+
+#product-sider{
+  background-color: #343A40;
+}
+
+.ant-timeline.ant-timeline-label .ant-timeline-item-left .ant-timeline-item-content {
+  left: calc(50% - 4px);
+  width: calc(100% - 14px);
+  text-align: left;
+}
+
+.text-white{
+  color: #FFFFFF;
+  height:100px;
+  width: 100px;
+}
+
+.text-white-no-hover{
+  color: #FFFFFF;
+  height:100px;
+  width: 100px;
+}
+
+.text-white:hover{ 
+  background-color:#FFFFFF;
+  color:#68717a
+}
+
+.text-off-white{
+  color: #E1D9D1;
+  height:100px;
+  width: 100px;
+}
+
+.text-off-white-no-hover{
+  color: #E1D9D1;
+  height:100px;
+  width: 100px;
+}
+
+.text-off-white:hover{ 
+  color: #E1D9D1;
+  color:#68717a
+}
+
+#addproductbutton{
+  background: "#c4c4c4"
+}
+
+.site-drawer-render-in-current-wrapper {
+  position: relative;
+  height: 700px;
+  padding: 48px;
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #ebedf0;
+  border-radius: 2px;
+}
+
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}

@@ -1,0 +1,29 @@
+global:
+  image:
+    repository: eu.gcr.io/logistics-pilots/
+name: auth-api
+group: authentication
+container:
+  name: auth-api
+  replicas: 1
+  port: 8000
+  image: eu.gcr.io/logistics-pilots/auth-api
+  repositoryPath: "auth-api"
+  tag: v0.0.139
+config:
+  name: config-volume
+  command: 
+    - "./auth"
+  args: 
+    - "--config"
+    - "/apps/prod/prod.toml"
+  configmap:
+    name: config
+  mount:
+    path: /apps/prod
+service:
+  port: 8000
+  type: ClusterIP
+env:
+  - name: ROCKET_DATABASES
+    value: '{users= { url = "postgres://root@auth-api-release-cockroachdb:26257/?sslmode=disable" }}'
